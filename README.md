@@ -7,10 +7,12 @@ Our proposed domain-based network approach is illustrated in the figure below. F
 ![figure1](https://user-images.githubusercontent.com/14062661/30707054-ded42b02-9ebf-11e7-872e-6d50b13302c7.jpg)
 
 
+
 # Installation
 > install.packages("devtools") <br />
 > library("devtools") <br />
 > devtools::install_github("perwu/FusionPathway") <br />
+
 
 
 # Scripts for the three fusions
@@ -19,6 +21,7 @@ This packages also contain scripts for the three examples mentioned in our paper
 > file.edit(file.path(system.file("scripts", package = "FusionPathway"), "Example_Fusion_BCR-ABL1.r")) <br />
 > file.edit(file.path(system.file("scripts", package = "FusionPathway"), "Example_Fusion_EWS_FLI1.r")) <br />
 > file.edit(file.path(system.file("scripts", package = "FusionPathway"), "Example_Fusion_FUS-DDIT3.r")) <br />
+
 
 
 # Example: BCR-ABL1
