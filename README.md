@@ -15,7 +15,7 @@ Our proposed domain-based network approach is illustrated in the figure below. F
 
 
 
-# Scripts for the three fusions
+# Scripts for the three examples of fusions
 This packages also contain scripts for the three examples mentioned in our paper, BCR-ABL1, EWSR1-FLI1, and FUS-DDIT3. The scripts can be accessed in the subfolder "scripts" under the package folder. <br />
 
 > file.edit(file.path(system.file("scripts", package = "FusionPathway"), "Example_Fusion_BCR-ABL1.r")) <br />
