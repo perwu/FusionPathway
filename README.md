@@ -8,5 +8,5 @@ Our proposed domain-based network approach is illustrated in the figure below. F
 
 # Installation
 install.packages("devtools")
-library("devtools")
-devtools::install_github("perwu/FusionPathway")
+!library("devtools")
+!devtools::install_github("perwu/FusionPathway")
