@@ -53,7 +53,12 @@ Run FusionPathway with the data of parental genes and their domains: <br />
 
 The “Result_List” contains predicted the protein-protein interaction partners of p210 BCR-ABL1, an ordered gene list ranked by the fusion-association prediction, results of GSEA pathway association analysis. <br />
 
-Prediction evaluation using different literature-based benchmark gene sets. Data file “BenchmarkSets_CML.RData” contains these benchmark gene sets.  <br />
+Prediction evaluation using 5 literature-based benchmark gene sets: 26 Wnt/Ca+/NFAT pathway genes 
+(denoted WNT_CA+_NFAT genes), 1150 genes cited with BCR-ABL1 in the literature (denoted BCR-ABL genes), 
+1240 genes cited with CML in the literature (denoted CML genes), 328 genes categorized in the 
+KEGG cancer pathways (denoted cancer pathway genes), and 68 target genes of compounds that have been 
+tested in clinical trials or used for the treatment of imatinib-resistant CML (denoted drug targets). 
+Data file “BenchmarkSets_CML.RData” contains these benchmark gene sets.  <br />
 
 > Score<-as.numeric(Result_List$Ranked_Result$Score) <br />
 > GeneID_ranked<-as.numeric(Result_List$Ranked_Result$GeneID_ranked) <br />
