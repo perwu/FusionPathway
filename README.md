@@ -94,11 +94,11 @@ Plot ROC curve:
 > LabelS<-c(paste("CML Genes(AUC=",ROC_M$CML_Genes$AUC,")",sep=""), <br />
 > 	paste("BCR-ABL Genes(AUC=",ROC_M$BCR_ABL1_Genes$AUC,")",sep=""), <br />
 > 	paste("Cancer Pathway Genes(AUC=",ROC_M$CancerPathway_Genes$AUC,")",sep=""), <br />
-> 	paste("WNT_CA+_NFAT Genes(AUC=",ROC_M[["WntCaNfat_Genes"]]$AUC,")",sep=""), <br />
+> 	paste("WNT_CA_NFAT Genes(AUC=",ROC_M[["WntCaNfat_Genes"]]$AUC,")",sep=""), <br />
 > 	paste("Drug Targets(AUC=",ROC_M$Drug_Targets$AUC,")",sep="")) <br />
 > legend(0.145,0.27,col=c("red","black","blue","purple","green"),  <br />
 >	legend=LabelS,lty=rep(1,5),lwd=3,cex=1.4,text.font=2) <br />
->dev.off() <br />
+> dev.off() <br />
 
 
 
