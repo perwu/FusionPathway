@@ -18,3 +18,14 @@ file.edit(file.path(system.file("scripts", package = "FusionPathway"), "Example_
 file.edit(file.path(system.file("scripts", package = "FusionPathway"), "Example_Fusion_EWS_FLI1.r")) <br />
 file.edit(file.path(system.file("scripts", package = "FusionPathway"), "Example_Fusion_FUS-DDIT3.r")) <br />
 
+# Example: BCR-ABL1
+We here applied our approach to the p210 BCR-ABL1. The ABL1 portion of p210 BCR-ABL1 contains tandem SRC homology (PF00017), the tyrosine kinase domains (PF07714), SH3 binding sites (PF00018), a DNA-binding domain, and an actin-binding domain (PF08919). The BCR portions of p210 BCR-ABL1 contains a coiled-coil oligomerisation domain (PF09036), Dbl homology domain (PF00621), and a pleckstrin homology domain (PF00169). <br />
+First, provide gene IDs, gene symbols, and protein domains (Pfam IDs) of the two parental genes, BCR and ABL1.  <br />
+> Gene1="BCR"
+> GeneID1<-613
+> PFAM1=c("PF09036","PF00621","PF00169","PF00168","PF00620")
+> Gene2="ABL1"
+> GeneID2<-25
+> PFAM2=c("PF00018","PF00017","PF07714","PF08919")
+
+
