@@ -27,5 +27,15 @@ First, provide gene IDs, gene symbols, and protein domains (Pfam IDs) of the two
 > Gene2="ABL1" <br />
 > GeneID2<-25 <br />
 > PFAM2=c("PF00018","PF00017","PF07714","PF08919") <br />
+Determine which proteins domains are retained in p210 BCR-ABL1: <br />
+> PFAM1_lost<-c("PF00620","PF00168") <br />	
+> PFAM1_kept<-setdiff(PFAM1,PFAM1_lost) <br />
+> PFAM2_lost<-"" <br />
+> PFAM2_kept<-setdiff(PFAM2,PFAM2_lost) <br />
+Running FusionPathway with the data of parental genes and their domains: <br />
+> DomainData<-list(pfam1_kept=PFAM1_kept,pfam1_lost=PFAM1_lost,pfam2_kept=PFAM2_kept,pfam2_lost=PFAM2_lost)
+> GeneData<-data.frame(Gene1=Gene1,Gene2=Gene2,GeneID1=GeneID1,GeneID2=GeneID2)
+> Result_List<-FusionPathway(GeneData,DomainData)
+> save("Ranked_Result.RData",Result_List)
 
 
