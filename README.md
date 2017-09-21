@@ -61,7 +61,7 @@ Prediction evaluation using different literature-based benchmark gene sets. Data
 > load(file.path(system.file("data", package = "FusionPathway"), "BenchmarkSets_CML.RData")) <br />
 > ROC_M<-NULL <br />
 > for (i in 1:5) { <br />
-> <br >if (i==1 | i==2) { <br />
+> \r\if (i==1 | i==2) { <br />
 > 		PubmedN<-BenchmarkSets_CML[[BenchmarkNames[i]]]$PubmedN <br />
 > 		GeneIDs<-BenchmarkSets_CML[[BenchmarkNames[i]]]$GeneIDs <br />
 > 		Ncitation_threshold=2 <br />
