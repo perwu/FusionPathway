@@ -82,8 +82,8 @@ Prediction evaluation using different literature-based benchmark gene sets. Data
 
 Plot ROC curves: 
 
-> outputfile="AUC_Different_Benchmarks.png" <br />
-> png(outputfile,width = 510, height = 510, units = "px") <br />
+> outputfile="AUC_Different_Benchmarks.jpeg" <br />
+> jpeg(outputfile,width = 510, height = 510, units = "px") <br />
 > par(mar=c(4,4.2,0.5,0.5)) <br />
 > pp<-plot(ROC_M$CML_Genes$FPR,ROC_M$CML_Genes$TPR,xlab="FPR",ylab="TPR", <br />
 >	col = "red",lwd=3,"l",cex=1.45,cex.axis=1.45,cex.lab=1.45,font.lab=2.3) <br />
