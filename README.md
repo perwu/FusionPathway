@@ -28,7 +28,7 @@ First, provide gene IDs, gene symbols, and protein domains (Pfam IDs) of the two
 > Gene2="ABL1" <br />
 > GeneID2<-25 <br />
 > PFAM2=c("PF00018","PF00017","PF07714","PF08919") <br />
-Determine which proteins domains are retained in p210 BCR-ABL1: <br />
+Determine which proteins domains are retained in p210 BCR-ABL1: 
 > PFAM1_lost<-c("PF00620","PF00168") <br />	
 > PFAM1_kept<-setdiff(PFAM1,PFAM1_lost) <br />
 > PFAM2_lost<-"" <br />
