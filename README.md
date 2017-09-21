@@ -21,6 +21,7 @@ This packages also contain scripts for the three examples mentioned in our paper
 # Example: BCR-ABL1
 We here applied our approach to the p210 BCR-ABL1. The ABL1 portion of p210 BCR-ABL1 contains tandem SRC homology (PF00017), the tyrosine kinase domains (PF07714), SH3 binding sites (PF00018), a DNA-binding domain, and an actin-binding domain (PF08919). The BCR portions of p210 BCR-ABL1 contains a coiled-coil oligomerisation domain (PF09036), Dbl homology domain (PF00621), and a pleckstrin homology domain (PF00169). <br />
 First, provide gene IDs, gene symbols, and protein domains (Pfam IDs) of the two parental genes, BCR and ABL1.  <br />
+> library("FusionPathway")  <br />
 > Gene1="BCR" <br />
 > GeneID1<-613 <br />
 > PFAM1=c("PF09036","PF00621","PF00169","PF00168","PF00620") <br />
@@ -33,9 +34,9 @@ Determine which proteins domains are retained in p210 BCR-ABL1: <br />
 > PFAM2_lost<-"" <br />
 > PFAM2_kept<-setdiff(PFAM2,PFAM2_lost) <br />
 Running FusionPathway with the data of parental genes and their domains: <br />
-> DomainData<-list(pfam1_kept=PFAM1_kept,pfam1_lost=PFAM1_lost,pfam2_kept=PFAM2_kept,pfam2_lost=PFAM2_lost)
-> GeneData<-data.frame(Gene1=Gene1,Gene2=Gene2,GeneID1=GeneID1,GeneID2=GeneID2)
-> Result_List<-FusionPathway(GeneData,DomainData)
-> save("Ranked_Result.RData",Result_List)
+> DomainData<-list(pfam1_kept=PFAM1_kept,pfam1_lost=PFAM1_lost,pfam2_kept=PFAM2_kept,pfam2_lost=PFAM2_lost) <br />
+> GeneData<-data.frame(Gene1=Gene1,Gene2=Gene2,GeneID1=GeneID1,GeneID2=GeneID2) <br />
+> Result_List<-FusionPathway(GeneData,DomainData) <br />
+> save("Ranked_Result.RData",Result_List) <br />
 
 
