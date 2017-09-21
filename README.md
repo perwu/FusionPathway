@@ -100,7 +100,7 @@ Plot ROC curves:
 >	legend=LabelS,lty=rep(1,5),lwd=3,cex=1.4,text.font=2) <br />
 > dev.off() <br />
 
-
+![auc_different_benchmarks](https://user-images.githubusercontent.com/14062661/30716320-38c6b2aa-9edf-11e7-813e-e68d95b2f61e.jpeg)
 
 
 
