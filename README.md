@@ -21,14 +21,17 @@ This packages also contain scripts for the three examples mentioned in our paper
 # Example: BCR-ABL1
 We here applied our approach to the p210 BCR-ABL1. The ABL1 portion of p210 BCR-ABL1 contains tandem SRC homology (PF00017), the tyrosine kinase domains (PF07714), SH3 binding sites (PF00018), a DNA-binding domain, and an actin-binding domain (PF08919). The BCR portions of p210 BCR-ABL1 contains a coiled-coil oligomerisation domain (PF09036), Dbl homology domain (PF00621), and a pleckstrin homology domain (PF00169). <br />
 First, provide gene IDs, gene symbols, and protein domains (Pfam IDs) of the two parental genes, BCR and ABL1.  <br />
+
 > library("FusionPathway")  <br />
 > Gene1="BCR" <br />
 > GeneID1<-613 <br />
 > PFAM1=c("PF09036","PF00621","PF00169","PF00168","PF00620") <br />
 > Gene2="ABL1" <br />
 > GeneID2<-25 <br />
-> PFAM2=c("PF00018","PF00017","PF07714","PF08919") 
+> PFAM2=c("PF00018","PF00017","PF07714","PF08919") <br />
+
 Determine which proteins domains are retained in p210 BCR-ABL1: <br />
+
 > PFAM1_lost<-c("PF00620","PF00168") <br />	
 > PFAM1_kept<-setdiff(PFAM1,PFAM1_lost) <br />
 > PFAM2_lost<-"" <br />
