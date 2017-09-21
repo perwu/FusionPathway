@@ -12,7 +12,7 @@ library("devtools") <br />
 devtools::install_github("perwu/FusionPathway") <br />
 
 # Scripts for the three fusions
-This packages also contain scripts for the three examples mentioned in our paper, BCR-ABL1, EWSR1-FLI1, and FUS-DDIT3. The scripts can be accessed in the subfolder "scripts" under the package folder. 
+This packages also contain scripts for the three examples mentioned in our paper, BCR-ABL1, EWSR1-FLI1, and FUS-DDIT3. The scripts can be accessed in the subfolder "scripts" under the package folder. <br />
 file.edit("/Users/cwu9/Library/R/3.3/library/FusionPathway/scripts/Example_Fusion_BCR-ABL1.r") <br />
 file.edit("/Users/cwu9/Library/R/3.3/library/FusionPathway/scripts/Example_Fusion_EWS_FLI1.r") <br />
 file.edit("/Users/cwu9/Library/R/3.3/library/FusionPathway/scripts/Example_Fusion_FUS-DDIT3.r") <br />
