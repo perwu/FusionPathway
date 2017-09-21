@@ -20,6 +20,7 @@ This packages also contain scripts for the three examples mentioned in our paper
 
 # Example: BCR-ABL1
 We here applied our approach to the p210 BCR-ABL1. The ABL1 portion of p210 BCR-ABL1 contains tandem SRC homology (PF00017), the tyrosine kinase domains (PF07714), SH3 binding sites (PF00018), a DNA-binding domain, and an actin-binding domain (PF08919). The BCR portions of p210 BCR-ABL1 contains a coiled-coil oligomerisation domain (PF09036), Dbl homology domain (PF00621), and a pleckstrin homology domain (PF00169). <br />
+
 First, provide gene IDs, gene symbols, and protein domains (Pfam IDs) of the two parental genes, BCR and ABL1.  <br />
 
 > library("FusionPathway")  <br />
@@ -36,10 +37,15 @@ Determine which proteins domains are retained in p210 BCR-ABL1: <br />
 > PFAM1_kept<-setdiff(PFAM1,PFAM1_lost) <br />
 > PFAM2_lost<-"" <br />
 > PFAM2_kept<-setdiff(PFAM2,PFAM2_lost) <br />
+
 Running FusionPathway with the data of parental genes and their domains: <br />
+
 > DomainData<-list(pfam1_kept=PFAM1_kept,pfam1_lost=PFAM1_lost,pfam2_kept=PFAM2_kept,pfam2_lost=PFAM2_lost) <br />
 > GeneData<-data.frame(Gene1=Gene1,Gene2=Gene2,GeneID1=GeneID1,GeneID2=GeneID2) <br />
 > Result_List<-FusionPathway(GeneData,DomainData) <br />
 > save("Ranked_Result.RData",Result_List) <br />
 
+The “Result_List” obtained contains predicted the protein-protein interaction partners of p210 BCR-ABL1, an ordered gene list ranked by the fusion-association prediction, results of GSEA pathway association analysis. <br />
+
+Prediction evaluation using different literature-based benchmark gene sets. Data file “BenchmarkSets_CML.RData” contains these benchmark gene sets.  <br />
 
