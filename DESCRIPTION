@@ -3,7 +3,7 @@ Version: 1.0.0
 Title: Domain-based network approach to infer the pathways that are functionally associated with a fusion and identify potential therapeutic targets in these pathways
 Author: Jianhua Zhang
 Maintainer: J. Zhang <jzhang22@mdanderson.org>
-Depends: R (>= 2.9),Matrix,fqsea,Rcpp,gridExtra,ggplot2
+Depends: R (>= 2.9),Matrix,fgsea,Rcpp,gridExtra,ggplot2
 Description: molecular mechanisms have been elucidated for only a few fusions, in part because of the labor-intensive nature of the required functional assays. Therefore, we developed a domain-based network approach to infer the pathways that are functionally associated with a fusion and identify potential therapeutic targets in these pathways
 Keyword: Fusion pathway prediction, network analysis, protein domain interaction, next-generation sequencing, cancer therapeutic targets
 License: LGPL
