@@ -82,22 +82,23 @@ Prediction evaluation using different literature-based benchmark gene sets. Data
 
 Plot ROC curve: 
 
-> outputfile="AUC_Different_Benchmarks.tiff"
-> tiff(outputfile,width = 510, height = 510, units = "px")
-> par(mar=c(4,4.2,0.5,0.5))
-> pp<-plot(ROC_M$CML_Genes$FPR,ROC_M$CML_Genes$TPR,xlab="FPR",ylab="TPR",col = "red",lwd=3,"l",cex=1.45,cex.axis=1.45,cex.lab=1.45,font.lab=2.3)
-> points(ROC_M$BCR_ABL1_Genes$FPR,ROC_M$BCR_ABL1_Genes$TPR,type="l",col="black",lwd=3)
-> points(ROC_M$CancerPathway_Genes$FPR,ROC_M$CancerPathway_Genes$TPR,type="l",col="blue",lwd=3)
-> points(ROC_M[["WNT-CA-NFAT_Genes"]]$FPR,ROC_M[["WNT-CA-NFAT_Genes"]]$TPR,type="l",col="purple",lwd=3)
-> points(ROC_M$Drug_TargetGenes$FPR,ROC_M$Drug_TargetGenes$TPR,type="l",col="green",lwd=3)
-> LabelS<-c(paste("CML Genes(AUC=",ROC_M$CML_Genes$AUC,")",sep=""),
-> 	paste("BCR-ABL Genes(AUC=",ROC_M$BCR_ABL1_Genes$AUC,")",sep=""),
-> 	paste("Cancer Pathway Genes(AUC=",ROC_M$CancerPathway_Genes$AUC,")",sep=""),
-> 	paste("WNT_CA+_NFAT Genes(AUC=",ROC_M[["WNT-CA-NFAT_Genes"]]$AUC,")",sep=""),
-> 	paste("Drug Targets(AUC=",ROC_M$Drug_TargetGenes$AUC,")",sep=""))
-> legend(0.145,0.27,col=c("red","black","blue","purple","green"), 
->	legend=LabelS,lty=rep(1,5),lwd=3,cex=1.4,text.font=2)
->dev.off()
+> outputfile="AUC_Different_Benchmarks.tiff" <br />
+> tiff(outputfile,width = 510, height = 510, units = "px") <br />
+> par(mar=c(4,4.2,0.5,0.5)) <br />
+> pp<-plot(ROC_M$CML_Genes$FPR,ROC_M$CML_Genes$TPR,xlab="FPR",ylab="TPR", <br />
+>	col = "red",lwd=3,"l",cex=1.45,cex.axis=1.45,cex.lab=1.45,font.lab=2.3) <br />
+> points(ROC_M$BCR_ABL1_Genes$FPR,ROC_M$BCR_ABL1_Genes$TPR,type="l",col="black",lwd=3) <br />
+> points(ROC_M$CancerPathway_Genes$FPR,ROC_M$CancerPathway_Genes$TPR,type="l",col="blue",lwd=3) <br />
+> points(ROC_M[["WNT-CA-NFAT_Genes"]]$FPR,ROC_M[["WNT-CA-NFAT_Genes"]]$TPR,type="l",col="purple",lwd=3) <br />
+> points(ROC_M$Drug_TargetGenes$FPR,ROC_M$Drug_TargetGenes$TPR,type="l",col="green",lwd=3) <br />
+> LabelS<-c(paste("CML Genes(AUC=",ROC_M$CML_Genes$AUC,")",sep=""), <br />
+> 	paste("BCR-ABL Genes(AUC=",ROC_M$BCR_ABL1_Genes$AUC,")",sep=""), <br />
+> 	paste("Cancer Pathway Genes(AUC=",ROC_M$CancerPathway_Genes$AUC,")",sep=""), <br />
+> 	paste("WNT_CA+_NFAT Genes(AUC=",ROC_M[["WNT-CA-NFAT_Genes"]]$AUC,")",sep=""), <br />
+> 	paste("Drug Targets(AUC=",ROC_M$Drug_TargetGenes$AUC,")",sep="")) <br />
+> legend(0.145,0.27,col=c("red","black","blue","purple","green"),  <br />
+>	legend=LabelS,lty=rep(1,5),lwd=3,cex=1.4,text.font=2) <br />
+>dev.off() <br />
 
 
 
