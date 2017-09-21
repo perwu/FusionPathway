@@ -51,7 +51,7 @@ Running FusionPathway with the data of parental genes and their domains: <br />
 > Result_List<-FusionPathway(GeneData,DomainData) <br />
 > save("Ranked_Result.RData",Result_List) <br />
 
-The “Result_List” obtained contains predicted the protein-protein interaction partners of p210 BCR-ABL1, an ordered gene list ranked by the fusion-association prediction, results of GSEA pathway association analysis. <br />
+The “Result_List” contains predicted the protein-protein interaction partners of p210 BCR-ABL1, an ordered gene list ranked by the fusion-association prediction, results of GSEA pathway association analysis. <br />
 
 Prediction evaluation using different literature-based benchmark gene sets. Data file “BenchmarkSets_CML.RData” contains these benchmark gene sets.  <br />
 
