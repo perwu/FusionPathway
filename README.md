@@ -6,5 +6,7 @@ Our proposed domain-based network approach is illustrated in the figure below. F
 
 ![figure1](https://user-images.githubusercontent.com/14062661/30707054-ded42b02-9ebf-11e7-872e-6d50b13302c7.jpg)
 
-# Install the development version from GitHub
+# Installation
+install.packages("devtools")
+library("devtools")
 devtools::install_github("perwu/FusionPathway")
