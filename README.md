@@ -55,3 +55,30 @@ The “Result_List” contains predicted the protein-protein interaction partner
 
 Prediction evaluation using different literature-based benchmark gene sets. Data file “BenchmarkSets_CML.RData” contains these benchmark gene sets.  <br />
 
+> Score<-as.numeric(Result_List$Ranked_Result$Score) <br />
+> GeneID_ranked<-as.numeric(Result_List$Ranked_Result$GeneID_ranked) <br />
+> BenchmarkNames<-c("CML_Genes","BCR_ABL1_Genes","WntCaNfat_Genes","CancerPathway_Genes","Drug_Targets") <br />
+> load(file.path(system.file("data", package = "FusionPathway"), "BenchmarkSets_CML.RData")) <br />
+> ROC_M<-NULL <br />
+> for (i in 1:5) { <br />
+> 	if (i==1 | i==2) { <br />
+> 		PubmedN<-BenchmarkSets_CML[[BenchmarkNames[i]]]$PubmedN <br />
+> 		GeneIDs<-BenchmarkSets_CML[[BenchmarkNames[i]]]$GeneIDs <br />
+> 		Ncitation_threshold=2 <br />
+> 		BenchID_pos<-GeneIDs[which(PubmedN>=Ncitation_threshold)] <br />
+> 	} else { <br />
+> 		BenchID_pos<-BenchmarkSets_CML[[BenchmarkNames[i]]]$GeneIDs	 <br />
+> 	}		 <br />
+> 	loc<-match(GeneID_ranked,BenchID_pos) <br />
+> 	outcome=rep(0,length(GeneID_ranked)) <br />
+> 	outcome[which(loc>0)]=1 <br />
+> 	ROC<-ROCF(outcome,Score) <br />
+> 	ROC_M[[BenchmarkNames[i]]]$TPR<-ROC$TPR <br />
+> 	ROC_M[[BenchmarkNames[i]]]$FPR<-ROC$FPR <br />
+> 	ROC_M[[BenchmarkNames[i]]]$AUC<-round(ROC$AUC,3) <br />
+> 	print(paste("AUC using ",BenchmarkNames[i]," genes: ",round(ROC$AUC,3),sep="")) <br />
+> } <br />
+> save(file="ROC.RData",ROC_M) <br />
+
+
+
