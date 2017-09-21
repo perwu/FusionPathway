@@ -44,7 +44,7 @@ Determine which proteins domains are retained in p210 BCR-ABL1: <br />
 > PFAM2_lost<-"" <br />
 > PFAM2_kept<-setdiff(PFAM2,PFAM2_lost) <br />
 
-Running FusionPathway with the data of parental genes and their domains: <br />
+Run FusionPathway with the data of parental genes and their domains: <br />
 
 > DomainData<-list(pfam1_kept=PFAM1_kept,pfam1_lost=PFAM1_lost,pfam2_kept=PFAM2_kept,pfam2_lost=PFAM2_lost) <br />
 > GeneData<-data.frame(Gene1=Gene1,Gene2=Gene2,GeneID1=GeneID1,GeneID2=GeneID2) <br />
@@ -80,10 +80,10 @@ Prediction evaluation using different literature-based benchmark gene sets. Data
 > } <br />
 > save(file="ROC.RData",ROC_M) <br />
 
-Plot ROC curve: 
+Plot ROC curves: 
 
-> outputfile="AUC_Different_Benchmarks.tiff" <br />
-> tiff(outputfile,width = 510, height = 510, units = "px") <br />
+> outputfile="AUC_Different_Benchmarks.png" <br />
+> png(outputfile,width = 510, height = 510, units = "px") <br />
 > par(mar=c(4,4.2,0.5,0.5)) <br />
 > pp<-plot(ROC_M$CML_Genes$FPR,ROC_M$CML_Genes$TPR,xlab="FPR",ylab="TPR", <br />
 >	col = "red",lwd=3,"l",cex=1.45,cex.axis=1.45,cex.lab=1.45,font.lab=2.3) <br />
