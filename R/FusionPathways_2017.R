@@ -375,6 +375,12 @@ GSEA_fgsea <- function(GeneData,Ranked_Result,FDR_threshold=1){
 	## association socre ranking
 	Genes_ranked<-Ranked_Result$GeneSymbol_ranked
 	Score_ranked<-as.numeric(Ranked_Result$Score)
+	# uniuqe
+	Genes_ranked_uniq<-unique(Genes_ranked)
+	loc<-match(Genes_ranked_uniq,Genes_ranked)
+	Genes_ranked<-Genes_ranked[loc]
+	Score_ranked<-Score_ranked[loc]
+	#
 	Score_ranked[which(Score_ranked==Inf)]<-1000000
 	names(Score_ranked)<-Genes_ranked
 	# rank order
