@@ -388,7 +388,9 @@ GSEA_fgsea <- function(GeneData,Ranked_Result,FDR_threshold=1){
 	names(Score_ranked2)<-Genes_ranked
 	
 	## run fGSEA
-    	fgseaRes <- fgsea(pathways = Pathway_M, stats = Score_ranked2,
+    	#fgseaRes <- fgsea(pathways = Pathway_M, stats = Score_ranked2,
+        #          minSize=15, maxSize=500, nperm=10000)
+	fgseaRes <- fgseaMultilevel(pathways = Pathway_M, stats = Score_ranked2,
                   minSize=15, maxSize=500, nperm=10000)
     
     ## Select top pathways and write the results
