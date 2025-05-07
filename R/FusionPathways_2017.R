@@ -391,7 +391,7 @@ GSEA_fgsea <- function(GeneData,Ranked_Result,FDR_threshold=1){
     	#fgseaRes <- fgsea(pathways = Pathway_M, stats = Score_ranked2,
         #          minSize=15, maxSize=500, nperm=10000)
 	fgseaRes <- fgseaMultilevel(pathways = Pathway_M, stats = Score_ranked2,
-                  minSize=15, maxSize=500, nperm=10000)
+                  minSize=15, maxSize=500, nPermSimple=10000)
     
     ## Select top pathways and write the results
     #Result_GSEA<-fgseaRes[fgseaRes[, padj < FDR_threshold],]
